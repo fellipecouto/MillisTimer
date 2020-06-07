@@ -1,0 +1,2 @@
+MillisTimer	KEYWORD1
+timer	KEYWORD2
