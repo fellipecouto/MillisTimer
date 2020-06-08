@@ -9,7 +9,7 @@
 #include "MillisTimer.h"
 #include <Arduino.h>
 
-unsigned long oldTime = 0;
+unsigned long _oldTime = 0;
 long _time = 0;
 
 MillisTimer::MillisTimer(long delayTime) {
@@ -17,8 +17,8 @@ MillisTimer::MillisTimer(long delayTime) {
 }
 
 bool MillisTimer::timer() {
-  if (millis() - oldTime >= _time) {
-    oldTime = millis();
+  if (millis() - _oldTime >= _time) {
+    _oldTime = millis();
     return true;
   }
   return false;

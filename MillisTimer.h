@@ -19,7 +19,7 @@ class MillisTimer {
     bool timer();
     
   private:
-    unsigned long oldTime = 0;
+    unsigned long _oldTime = 0;
     long _time = 0;
 };
 #endif
